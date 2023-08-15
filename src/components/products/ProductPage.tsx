@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from "react";
 import {useParams} from "react-router-dom";
 import {IProductData, products} from "./ProductData.ts";
-import {Fragment} from "react";
+import Product from "./Product.tsx";
+import './Products.css';
 
 const ProductPage: React.FC = () => {
 
@@ -18,11 +19,6 @@ const ProductPage: React.FC = () => {
         }
     }, []);
 
-    const currencyFormat = new Intl.NumberFormat("en-US", {
-        style: 'currency',
-        currency: 'USD'
-    });
-
     const handleAddToCartBtnClick = (): void => {
         setIsAddedToCart(true);
     }
@@ -31,15 +27,7 @@ const ProductPage: React.FC = () => {
         <div className="page-container">
             {
                 product ?
-                    <Fragment>
-                        <h1>{product.name}</h1>
-                        <p>{product.description}</p>
-                        <p className="product-price">
-                            {currencyFormat.format(product.price)}
-                        </p>
-                        { !isAddedToCart &&
-                            <button onClick={handleAddToCartBtnClick}>Add To Basket</button>}
-                    </Fragment> :
+                    <Product product={product} inBasket={isAddedToCart} onAddToBasket={handleAddToCartBtnClick}/> :
                     <p>Product Not Found !</p>
             }
         </div>

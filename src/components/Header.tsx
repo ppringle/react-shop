@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import {NavLink, useNavigate} from "react-router-dom";
-import logo from './vite.svg';
+import logo from '../vite.svg';
 
 const Header: React.FC = () => {
 

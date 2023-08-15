@@ -1,8 +1,8 @@
 import * as React from "react";
 import {BrowserRouter as Router, Navigate, Routes, Route} from "react-router-dom";
-import ProductsPage from "./ProductsPage.tsx";
+import ProductsPage from "./products/ProductsPage.tsx";
 import Header from "./Header.tsx";
-import ProductPage from "./ProductPage.tsx";
+import ProductPage from "./products/ProductPage.tsx";
 import NotFoundPage from "./NotFoundPage.tsx";
 import LoginPage from "./LoginPage.tsx";
 import AdminProducts from "./admin/AdminProducts.tsx";

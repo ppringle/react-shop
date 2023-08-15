@@ -2,11 +2,6 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -63,25 +58,14 @@ a:-webkit-any-link {
 }
 
 .header-link-active {
+  color: darkorchid;
   border-bottom: #ebebeb solid 2px;
 }
 
 .page-container {
+  background-color: white;
+  color: #000;
   text-align: center;
   padding: 5px;
   font-size: large;
-}
-
-.product-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.product-list-item {
-  padding: 5px;
-}
-
-.product-list-item a {
-  text-decoration: none;
 }
