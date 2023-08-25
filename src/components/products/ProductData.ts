@@ -11,6 +11,16 @@ export interface IProductData {
     reviews: IProductReview[];
 }
 
+const wait = (ms: number): Promise<void> => {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+export const getProductById = async (id: number): Promise<IProductData | null> => {
+    await wait(1000);
+    const foundProducts = products.filter(product => product.id === id);
+    return foundProducts?.length > 0 ? foundProducts[0] : null;
+}
+
 export const products: IProductData[] = [
     {
         id: 1,
